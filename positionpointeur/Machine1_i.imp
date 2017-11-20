@@ -1,0 +1,66 @@
+/* Machine1_i
+ * Author: monta & marie
+ * Creation date: 09/11/2017
+ */
+
+IMPLEMENTATION Machine1_i
+REFINES Machine1
+VALUES
+    x0 = 0
+    ;y0 = 0
+    ;dy = 100
+    ;dx =100
+CONCRETE_VARIABLES
+    xc //les variables courantes
+    ,yc
+
+
+INITIALISATION
+    xc := x0
+    ; yc := y0
+    
+    
+
+OPERATIONS
+    // Incrémentation de X
+    incrX(px) =
+    BEGIN
+        xc := px +xc
+    END
+    
+    ;
+   
+    // Incrémentation de Y
+    incrY(py) =
+    BEGIN
+        yc := py +yc
+    END
+    
+    ;
+
+    
+    // Changement valeur de x
+    changeX(px)=
+    BEGIN
+        xc := px
+    END
+    
+    ;
+
+    
+    // Changement valeur de y
+    changeY(py)=
+    BEGIN
+        yc := py
+    END
+    
+    ;
+
+    
+    // Décrémentation de X
+   decrX(px) =
+    BEGIN
+        xc := xc - px
+    END
+
+ END
